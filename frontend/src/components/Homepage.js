@@ -1,9 +1,7 @@
 import React from 'react';
-import '../styles/Home.css';
 import logo from '../assets/logo.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-import '../assets/swiper/swiper-bundle.min.css';
 
 function Home() {
   return (
@@ -13,7 +11,7 @@ function Home() {
         <div className="row gy-4">
           <div
             className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
-            // data-aos="zoom-out"
+            data-aos="zoom-out"
           >
             <h1>Казахстанская Ассоциация Электронной Промышленности</h1>
             <p>КАЭП объединяет ведущие предприятия и организации, работающие в сфере электронной промышленности Казахстана. Мы способствуем развитию отрасли, поддерживаем инновации и способствуем укреплению сотрудничества между участниками рынка.</p>
@@ -28,15 +26,14 @@ function Home() {
             </div>
           </div>
           <div
-            className="col-lg-6 order-1 order-lg-2 hero-img d-flex justify-content-center"
-            // data-aos="zoom-out"
-            // data-aos-delay="200"
+            className="col-lg-6 order-1 order-lg-2 hero-img d-flex justify-content-center align-items-center big-logo-div"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             <img
               src={logo}
-              className="img-fluid animated"
-              alt="Hero"
-            />
+              className="img-fluid animated big-logo"
+              alt="Hero"/>
           </div>
         </div>
       </div>
@@ -44,7 +41,9 @@ function Home() {
     
 
     <section id="clients" className="clients section light-background">
-      <div className="container" data-aos="zoom-in">
+      <div className="container" 
+      data-aos="zoom-in"
+      >
         <Swiper
           loop={true}
           speed={600}
@@ -100,12 +99,4 @@ function Home() {
 }
 
 export default Home;
-// return (
-//   <div className="home-container">
-//     <img src={logo} alt="Brand Logo" className="logo-full" />
-//     <h1>Добро пожаловать на сайт Казахстанской Ассоциации Электронной Промышленности (КАЭП)!</h1>
-//     <p>КАЭП объединяет ведущие предприятия и организации, работающие в сфере электронной промышленности Казахстана. Мы способствуем развитию отрасли, поддерживаем инновации и способствуем укреплению сотрудничества между участниками рынка.</p>
-//   </div>
-  
-// );
 

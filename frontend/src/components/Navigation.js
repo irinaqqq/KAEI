@@ -1,8 +1,27 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-// import '../styles/Navigation.css';
-// import logo from '../assets/logo.png';
 function Navigation() {
+
+  useEffect(() => {
+    const toggleScrolled = () => {
+      const selectBody = document.querySelector('body');
+      const selectHeader = document.querySelector('#header');
+      if (!selectHeader.classList.contains('scroll-up-sticky') && 
+          !selectHeader.classList.contains('sticky-top') && 
+          !selectHeader.classList.contains('fixed-top')) return;
+      window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    };
+
+    // Добавляем обработчики событий
+    document.addEventListener('scroll', toggleScrolled);
+    window.addEventListener('load', toggleScrolled);
+
+    // Удаляем обработчики событий при размонтировании компонента
+    return () => {
+      document.removeEventListener('scroll', toggleScrolled);
+      window.removeEventListener('load', toggleScrolled);
+    };
+  }, []);
 
   useEffect(() => {
     // Обработчик клика для выпадающих меню
@@ -50,87 +69,32 @@ function Navigation() {
       <header id="header" className="header d-flex align-items-center fixed-top">
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
   
-        <a href="index.html" className="logo d-flex align-items-center me-auto">
+        <NavLink to="/" className="logo d-flex align-items-center me-auto">
           {/* <img src="assets/img/logo.png" alt=""> */}
           <h1 className="sitename">KAEI</h1>
-        </a>
+        </NavLink>
   
         <nav id="navmenu" className="navmenu">
           <ul>
             <li><NavLink to="/">Главная страница</NavLink> </li>
             
             <li><NavLink to="/about">О нас</NavLink></li>
+            {/* <li><NavLink to="/partners">Наши партнеры</NavLink></li> */}
             <li><NavLink to="/membership">Членство</NavLink></li>
             <li><NavLink to="/services">Услуги</NavLink></li>
             <li><NavLink to="/contact">Связаться с нами</NavLink></li>
-            <li className="dropdown"><a href="#"><span>Новости</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
+            {/* eslint-disable-next-line */}
+            <li className="dropdown"><a href=""><span>Новости</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                {/* <li><a href="#">Dropdown 1</a></li> */}
-                {/* <li className="dropdown"><a href="#"><span>Deep Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li> */}
                 <li><NavLink to="/news">Новости</NavLink></li>
                 <li><NavLink to="/events">События</NavLink></li>
-                {/* <li><a href="#">Dropdown 4</a></li> */}
               </ul>
             </li>
-            {/* <li><a href="#contact">Contact</a></li> */}
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-  
-        {/* <a className="btn-getstarted" href="#about">Get Started</a> */}
-  
       </div>
     </header>
     );
   }
 export default Navigation;
-
-
-
-// const navRef = useRef();
-
-// const showNavbar = () => {
-//   navRef.current.classList.toggle(
-//     "responsive_nav"
-//   );
-// };
-
-      // <header>
-      //   <a href="/" className="logo-link">
-      //     <img src={logo} alt="Brand Logo" className="logo" />
-      //   </a>
-      //   <nav ref={navRef}>
-      //       <NavLink to="/">Главная страница</NavLink>
-      
-      //       <NavLink to="/about">О нас</NavLink>
-
-      //       <NavLink to="/membership">Членство</NavLink>
-
-      //       <NavLink to="/services">Услуги</NavLink>
-
-      //       <NavLink to="/news">Новости</NavLink>
-
-      //       <NavLink to="/events">События</NavLink>
-
-      //       <NavLink to="/contact">Связаться с нами</NavLink>
-      //       <button
-      //         className="nav-btn nav-close-btn"
-      //         onClick={showNavbar}>
-      //         <FaTimes />
-      //       </button>
-      //       </nav>
-      //       <button
-      //         className="nav-btn"
-      //         onClick={showNavbar}>
-      //         <FaBars />
-      //       </button>
-
-      // </header>

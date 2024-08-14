@@ -21,7 +21,7 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #37517e; /* Color for headings, subheadings and title throughout the website */
+  --heading-color: #487ac6; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #47b2e4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -143,7 +143,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #3d4d6a;
+  --background-color: #487ac6;
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
@@ -206,7 +206,7 @@ h6 {
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
-  --background-color: rgba(255, 255, 255, 0);
+  /* --background-color: rgba(255, 255, 255, 0); */
   --heading-color: #ffffff;
   --nav-color: #ffffff;
 }
@@ -214,7 +214,7 @@ h6 {
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: rgba(40, 58, 90, 0.9);
+  --background-color: rgba(72, 122, 198, 0.9);
 }
 
 /*--------------------------------------------------------------
@@ -238,8 +238,12 @@ h6 {
     position: relative;
   }
 
+  /* .dropdown-toggle2{
+    border: none;
+    background: transparent;
+  } */
   .navmenu a,
-  .navmenu a:focus {
+  .navmenu a:focus, .navmenu .dropdown-toggle2{
     color: var(--nav-color);
     padding: 18px 15px;
     font-size: 15px;
@@ -278,7 +282,7 @@ h6 {
     display: block;
     position: absolute;
     visibility: hidden;
-    left: 14px;
+    /* left: 14px; */
     top: 130%;
     opacity: 0;
     transition: 0.3s;
@@ -783,7 +787,7 @@ section,
 .section {
   color: var(--default-color);
   background: var(--background-color);
-  padding: 60px 0;
+  padding: 120px 0;
   scroll-margin-top: 88px;
   overflow: clip;
 }
@@ -801,7 +805,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 48px;
   position: relative;
 }
 
@@ -949,9 +953,9 @@ section,
 # Clients Section
 --------------------------------------------------------------*/
 .clients {
-  padding: 12px 0;
+  padding: 6vh 0;
   display: flex;
-  min-height: 20vh;
+  min-height: 15vh;
   align-items: center;
 }
 
@@ -975,6 +979,10 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about{
+  padding: 120px 0 60px 0;
+}
+
 .about ul {
   list-style: none;
   padding: 0;
@@ -1027,7 +1035,9 @@ section,
 # Why Us Section
 --------------------------------------------------------------*/
 .why-us {
-  padding: 30px 0;
+  /* padding: 30px 0; */
+  padding-top: 150px;
+  padding-bottom: 30px;
 }
 
 .why-us .content h3 {
@@ -1058,7 +1068,7 @@ section,
   line-height: 24px;
   margin: 0 30px 0 0;
   transition: 0.3s;
-  cursor: pointer;
+  cursor: default;
 }
 
 .why-us .faq-container .faq-item h3 span {
@@ -1131,7 +1141,7 @@ section,
 }
 
 .why-us .why-us-img img {
-  max-height: 70%;
+  /* max-height: 70%; */
 }
 
 /*--------------------------------------------------------------
@@ -1237,6 +1247,9 @@ section,
 
 .services .service-item:hover h4 a {
   color: var(--accent-color);
+}
+.services{
+  padding: 20px 0;
 }
 
 /*--------------------------------------------------------------
@@ -2068,4 +2081,52 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.big-logo{
+  /* max-width: 90%; */
+  /* height: auto; */
+  /* max-height: 80%; */
+  margin-left: 30%;
+  max-height: 550px;
+}
+@media (max-width: 1199px) {
+
+  .big-logo{
+    /* max-width: 65%; */
+    margin-left: 0 !important;
+    /* max-height: 100%; */
+    /* margin-top: var(--bs-gutter-y); */
+  }
+  .big-logo-div{
+    margin: 0;
+    padding: 30px;
+  }
+  .hero{
+    padding-top: 80px;
+  }
+  .why-us {
+    padding-top: 60px;
+  }
+}
+.swiper-button-next, .swiper-button-prev {
+  color: var(--accent-color)
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img{
+  height: 450px;
+}
+
+/* .member-img{
+  max-height: 400px;
+} */
+
+.highlighted{
+  color: var(--accent-color);
 }
