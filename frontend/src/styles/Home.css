@@ -1,0 +1,31 @@
+/* Home.css */
+.home-container {
+  /* min-height: 100vh; */
+  height: 100%;
+  background: linear-gradient(to bottom, #487ac6, #ffffff); /* Градиент от синего к белому */
+  display: flex; /* Используем Flexbox для центрирования контента */
+  flex-direction: column; /* Размещаем элементы вертикально */
+  align-items: center; /* Центрируем по горизонтали */
+  text-align: center; /* Центрируем текст */
+  padding: 2rem; /* Добавьте отступы по необходимости */
+}
+
+.logo-full {
+  max-width: 80%; /* Устанавливаем максимальную ширину для предотвращения переполнения */
+  height: auto; /* Высота устанавливается автоматически, чтобы сохранить пропорции */
+  margin-bottom: 1rem; /* Добавляем отступ снизу */
+  animation: float 3s ease-in-out infinite; /* Применяем анимацию */
+}
+
+/* Анимация плавного поднятия и спуска */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Поднимаем изображение вверх на 10px */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
