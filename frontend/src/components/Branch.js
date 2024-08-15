@@ -1,4 +1,4 @@
-function Partners() {
+function Branch() {
     return (
         <>
         <section id="call-to-action" className="call-to-action section dark-background">
@@ -48,4 +48,4 @@ function Partners() {
       );
   }
   
-  export default Partners;
+  export default Branch;

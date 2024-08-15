@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
+
 function Navigation() {
+
+  const location = useLocation(); 
 
   useEffect(() => {
     const toggleScrolled = () => {
@@ -65,6 +68,20 @@ function Navigation() {
       mobileNavToggleBtn.removeEventListener('click', mobileNavToogle);
     };
   }, []);
+
+  useEffect(() => {
+    const closeMobileNav = () => {
+      document.querySelector('#root').classList.remove('mobile-nav-active');
+      const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+      if (mobileNavToggleBtn) {
+        mobileNavToggleBtn.classList.add('bi-list');
+        mobileNavToggleBtn.classList.remove('bi-x');
+      }
+    };
+
+    closeMobileNav(); // Закрыть меню при изменении маршрута
+  }, [location]); 
+
     return (
       <header id="header" className="header d-flex align-items-center fixed-top">
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
@@ -82,9 +99,14 @@ function Navigation() {
             {/* <li><NavLink to="/partners">Наши партнеры</NavLink></li> */}
             <li><NavLink to="/membership">Членство</NavLink></li>
             <li><NavLink to="/services">Услуги</NavLink></li>
+            <li className="dropdown"><button className='navBtn'><span>Политика и Отрасль</span> <i className="bi bi-chevron-down toggle-dropdown"></i></button>
+            <ul style={{ marginLeft: '15px' }}>
+                <li><NavLink to="/politics">Государственная<br /> политика</NavLink></li>
+                <li><NavLink to="/branch">Отрасль</NavLink></li>
+              </ul>
+            </li>
             <li><NavLink to="/contact">Связаться с нами</NavLink></li>
-            {/* eslint-disable-next-line */}
-            <li className="dropdown"><a href=""><span>Новости</span> <i className="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li className="dropdown"><button className='navBtn'><span>Новости</span> <i className="bi bi-chevron-down toggle-dropdown"></i></button>
               <ul>
                 <li><NavLink to="/news">Новости</NavLink></li>
                 <li><NavLink to="/events">События</NavLink></li>

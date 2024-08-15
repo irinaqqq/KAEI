@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Homepage';
 import About from './components/About';
-// import Partners from './components/Partners';
 import Membership from './components/Membership';
 import Services from './components/Services';
+import Politics from './components/Politics';
+import Branch from './components/Branch';
 import News from './components/News';
 import Events from './components/Events';
 import Contact from './components/Contact';
@@ -53,9 +54,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/partners" element={<Partners />} /> */}
           <Route path="/membership" element={<Membership />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/politics" element={<Politics />} />
+          <Route path="/branch" element={<Branch />} />
           <Route path="/news" element={<News />} />
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />

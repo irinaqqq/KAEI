@@ -269,9 +269,10 @@ h6 {
   }
 
   .navmenu li:hover>a,
+  /* .navmenu li:hover>button, */
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: var(--nav-hover-color) !important;
     transform: scale(1.1); 
   }
 
@@ -412,7 +413,8 @@ h6 {
   }
 
   .navmenu a,
-  .navmenu a:focus {
+  .navmenu a:focus,
+  .navmenu button {
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-family: var(--nav-font);
@@ -423,10 +425,12 @@ h6 {
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
+    transform: scale(1); 
   }
 
-  .navmenu a i,
-  .navmenu a:focus i {
+
+  .navmenu button i,
+  .navmenu button:focus i {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
@@ -1068,7 +1072,7 @@ section,
   line-height: 24px;
   margin: 0 30px 0 0;
   transition: 0.3s;
-  cursor: default;
+  /* cursor: default; */
 }
 
 .why-us .faq-container .faq-item h3 span {
@@ -1249,7 +1253,9 @@ section,
   color: var(--accent-color);
 }
 .services{
-  padding: 20px 0;
+  /* height: 100%; */
+  padding-top: 130px;
+  padding-bottom: 90px;
 }
 
 /*--------------------------------------------------------------
@@ -2083,12 +2089,19 @@ section,
   /* Add your styles here */
 }
 
+.why-us2{
+  padding: 120px 0;
+}
+
 .big-logo{
   /* max-width: 90%; */
   /* height: auto; */
   /* max-height: 80%; */
   margin-left: 30%;
   max-height: 550px;
+}
+.skills2{
+  padding-bottom: 0;
 }
 @media (max-width: 1199px) {
 
@@ -2107,6 +2120,17 @@ section,
   }
   .why-us {
     padding-top: 60px;
+  }
+  .services{
+    padding: 100px 0;
+    /* height: 100%; */
+  }
+  .section-title2{
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .skills2{
+    padding-bottom: 0;
   }
 }
 .swiper-button-next, .swiper-button-prev {
@@ -2129,4 +2153,36 @@ section,
 
 .highlighted{
   color: var(--accent-color);
+}
+
+.navBtn{
+  border: none;
+  background-color: transparent;
+  color: var(--nav-color);
+  font-size: 15px;
+  padding: 18px 15px;
+  font-family: var(--nav-font);
+  transition: 0.3s;
+}
+.navBtn:hover{
+  color: var(--nav-hover-color);
+  transform: scale(1.1); 
+}
+
+.noScale:hover{
+  /* transform: scale(1) !important; */
+  /* margin-left: 10px; */
+}
+
+@media (max-width: 1199px) {
+  .navBtn:hover {
+    transform: scale(1);
+}
+  /* .skills{
+    padding-top: 66px;
+  } */
+}
+
+.faq-pointer{
+  cursor: pointer;
 }
