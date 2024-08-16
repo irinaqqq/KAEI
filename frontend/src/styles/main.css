@@ -809,7 +809,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 48px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -1255,7 +1255,7 @@ section,
 .services{
   /* height: 100%; */
   padding-top: 130px;
-  padding-bottom: 90px;
+  padding-bottom: 110px;
 }
 
 /*--------------------------------------------------------------
@@ -2185,4 +2185,47 @@ section,
 
 .faq-pointer{
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    white-space: nowrap; /* Отключает перенос текста */
+    padding: 8px; /* Уменьшение отступов для экономии места */
+  }
+
+  .table thead th {
+    font-size: 12px; /* Ещё большее уменьшение шрифта в заголовках на мобильных */
+  }
+
+  .table tbody td {
+    font-size: 12px; /* Уменьшение шрифта в теле таблицы */
+  }
+}
+
+/* .socLinks{
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+} */
+.socLinks:hover{
+  color: #47b2e4;
+}
+
+.skills3{
+  padding-bottom: 50px;
+  padding-top: 160px;
+}
+.contact2{
+  padding-top: 250px;
+  padding-bottom: 100px;
+}
+@media (max-width: 1199px) {
+  .contact2{
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
