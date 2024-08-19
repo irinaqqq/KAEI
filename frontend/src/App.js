@@ -35,8 +35,18 @@ function App() {
     const handleLoad = () => {
       setLoading(false);
     };
+
     window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
+
+    // Пробуем тайм-аут в 5 секунд, чтобы избежать вечного ожидания
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      clearTimeout(timer);
+    };
   }, []);
 
 
