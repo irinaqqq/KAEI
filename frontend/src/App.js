@@ -41,7 +41,7 @@ function App() {
     // Пробуем тайм-аут в 5 секунд, чтобы избежать вечного ожидания
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
 
     return () => {
       window.removeEventListener('load', handleLoad);

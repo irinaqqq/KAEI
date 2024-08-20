@@ -126,11 +126,10 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Укажи адрес фронтенда
+CORS_ALLOWED_ORIGINS = [  
     "http://localhost",  # Для прямого доступа с корневого домена
-    "http://env-3063293.jcloud.kz:3000",
-    "http://env-3063293.jcloud.kz",
+    "https://env-3063293.jcloud.kz",
+    "https://kaei.kz",
 ]
 
 MEDIA_URL = '/media/'
