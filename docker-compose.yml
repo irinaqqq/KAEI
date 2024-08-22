@@ -8,12 +8,15 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - /var/lib/jelastic/keys:/var/lib/jelastic/keys:ro 
-
+      - /srv/KAEI/backend/media:/srv/KAEI/backend/media:ro
+      - /srv/KAEI/backend/staticfiles:/srv/KAEI/backend/staticfiles:ro
   backend:
     build:
       context: ./backend
     ports:
       - "8000:8000"
+    volumes:
+      - /srv/KAEI/backend/staticfiles:/srv/KAEI/backend/staticfiles
     depends_on:
       - frontend
     environment:
