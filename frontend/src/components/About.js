@@ -31,7 +31,7 @@ function About() {
       <div className="container section-title mt-5" 
       data-aos="fade-up"
       >
-        <h2>История</h2>
+        <h2>История становления</h2>
       </div>
 
       <div className="container"
@@ -39,11 +39,59 @@ function About() {
        data-aos-delay="100">
             <p>
             ОЮЛ «Казахстанская Ассоциация Электронной Промышленности» (далее - Ассоциация) основана в июне 2023 года 3 учредительными предприятиями электронной промышленности ТОО «QazaQ Technology», ТОО «Qazaq Technology Ltd» и ТОО «Infinity Way» и с тех пор активно работает над развитием и поддержкой электронной промышленности в Казахстане.
-            За прошедший период, Ассоциация провела ряд работ, направленных на расширение состава участников Ассоциации, определение перечня приоритетных задач для членов Ассоциации, отработку с уполномоченным органом в сфере электронной промышленности (МЦРИАП РК) и другими государственными органами и квазигосударственными организациями приоритетов по развитию отрасли электронной промышленности и поддержки отечественных производителей, а также налаживание сотрудничества с высшими учебными заведениями по вопросам интеграции усилий данных организаций с предприятиями отрасли в сфере подготовки кадров, и проведения совместных прикладных научных исследований.
-            В результате данной работы, на сегодняшний день в состав Ассоциации дополнительно вошли два предприятия электронной промышленности – ТОО «Телемедицинский центр «Сапа» (отечественный разработчик телемедицинской платформы дистанционного мониторинга и производитель цифровых 12-канальных портативных электрокардиографов с функцией интернет-телеметрии) и ТОО «QR Systems» (производитель противопожарных систем, систем видеонаблюдения и других приборов для системы «умного дома»). 
-            Также, Ассоциация включена в ряд рабочих групп уполномоченным органом в сфере электронной промышленности (Министерство цифрового развития, инноваций и аэрокосмической промышленности РК) по совершенствованию нормативно-правовых актов в сфере мер государственной поддержки предприятий отрасли В частности, были внесены предложения в МЦРИАП РК по совершенствованию критериев для включения в Реестр доверенного ПО и продукции электронной промышленности, которые концептуально были одобрены руководством уполномоченного органа и приняты в работу. 
-            КАЭП аккредитована в МЦРИАП РК как объединение субъектов частного предпринимательства и иных некоммерческих организаций.
             </p>
+            <p>
+            За прошедший период, Ассоциация провела ряд работ, направленных на расширение состава участников Ассоциации, определение перечня приоритетных задач для членов Ассоциации, отработку с уполномоченным органом в сфере электронной промышленности (МЦРИАП РК) и другими государственными органами и квазигосударственными организациями приоритетов по развитию отрасли электронной промышленности и поддержки отечественных производителей, а также налаживание сотрудничества с высшими учебными заведениями по вопросам интеграции усилий данных организаций с предприятиями отрасли в сфере подготовки кадров, и проведения совместных прикладных научных исследований.
+
+            </p>
+            <p>
+            В результате данной работы, на сегодняшний день в состав Ассоциации дополнительно вошли 6 предприятий электронной промышленности:
+            </p>
+
+            <div className='why-us p-0'>
+            <div className="faq-container" data-aos="fade-up" data-aos-delay="200">
+              <a href="https://sapatelemed.kz/" target="_blank" rel="noopener noreferrer" className='d-block mb-3'>
+                <div className="faq-item faq-pointer">
+                  <h3>
+                    <span>01</span> ТОО «Телемедицинский центр «Сапа», г. Астана - отечественный разработчик телемедицинской платформы дистанционного мониторинга и производитель цифровых 12-канальных портативных электрокардиографов с функцией интернет-телеметрии
+                  </h3>
+                </div>
+              </a>
+
+              <div className="faq-item faq-pointer">
+                <h3><span>02</span>	ТОО «QR Systems», г. Астана - производитель противопожарных систем, систем видеонаблюдения и других приборов для системы «умного дома»</h3>
+              </div>
+              
+              <a href="https://qazaqtechnology.kz/" target="_blank" rel="noopener noreferrer" className='d-block mb-3'>
+              <div className="faq-item faq-pointer">
+                <h3><span>03</span> ТОО «Qazaq Investment Company», г. Алматы - производитель компьютерной техники, блоков питания и пластиковых компонентов для компьютерной техники</h3>
+              </div>
+              </a>
+
+              <a href="https://eltexalatau.kz/" target="_blank" rel="noopener noreferrer" className='d-block mb-3'>
+              <div className="faq-item faq-pointer">
+                <h3><span>04</span> ТОО «Элтекс Алатау», г. Алматы - производитель электроники и телекоммуникационного оборудования</h3>
+              </div>
+              </a>
+
+              <div className="faq-item faq-pointer">
+                <h3><span>05</span> ТОО «AV CLOUD», г. Шымкент - производитель компьютеров и периферийного оборудования</h3>
+              </div>
+              <div className="faq-item faq-pointer">
+                <h3><span>06</span> ТОО «Голд-Проект», г. Актобе - производитель компьютеров и периферийного оборудования</h3>
+              </div>
+            </div>
+        </div>
+
+        <p className='mt-3'>
+        Также, Ассоциация включена в ряд рабочих групп уполномоченным органом в сфере электронной промышленности (Министерство цифрового развития, инноваций и аэрокосмической промышленности РК) по совершенствованию нормативно-правовых актов в сфере мер государственной поддержки предприятий отрасли В частности, были внесены предложения в МЦРИАП РК по совершенствованию критериев для включения в Реестр доверенного ПО и продукции электронной промышленности, которые концептуально были одобрены руководством уполномоченного органа и приняты в работу.
+        </p>
+        <p>
+        КАЭП аккредитована в МЦРИАП РК как объединение субъектов частного предпринимательства и иных некоммерческих организаций:
+        </p>
+        <div className='d-flex flex-column align-items-center'>
+        <img src="assets/img/clients/cert.png" className="img-fluid" alt="" />
+        </div>
       </div>
 
       <div className="container section-title mt-5" 
@@ -67,7 +115,7 @@ function About() {
             </ul>
             </div>
             <div className="col-lg-6 content"        data-aos="fade-up"
-       data-aos-delay="200">
+       data-aos-delay="300">
             <ul>
               <li><i className="bi bi-check2-circle"></i> <span>Содействие реализации государственных программ и задач, связанных с отраслью электронной промышленности.</span></li>
               <li><i className="bi bi-check2-circle"></i> <span>Представление интересов членов Ассоциации в государственных, негосударственных и международных учреждениях и организациях.</span></li>
@@ -94,27 +142,37 @@ function About() {
             <section id="services" className="services section">    
               <div className="container">
                 <div className="row gy-4">
-                  <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-                    <div className="service-item position-relative shadow-none">
+                  <div className="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div className="service-item position-relative shadow-none d-flex justify-content-center align-items-center">
                     <img src="assets/img/clients/client-1.png" className="img-fluid" alt="" />
                     </div>
                   </div>
         
-                  <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-                    <div className="service-item position-relative shadow-none">
-                    <img src="assets/img/clients/client-1.png" className="img-fluid" alt="" />
+                  <div className="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <div className="service-item position-relative shadow-none d-flex justify-content-center align-items-center">
+                    <img src="assets/img/clients/client-2.png" className="img-fluid" alt="" />
                     </div>
                   </div>
         
-                  <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-                    <div className="service-item position-relative shadow-none">
-                    <img src="assets/img/clients/client-1.png" className="img-fluid" alt="" />
+                  <div className="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <div className="service-item position-relative shadow-none d-flex justify-content-center align-items-center">
+                    <img src="assets/img/clients/client-3.png" className="img-fluid" alt="" />
                     </div>
                   </div>
         
-                  <div className="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-                    <div className="service-item position-relative shadow-none">
-                    <img src="assets/img/clients/client-1.png" className="img-fluid" alt="" />
+                  <div className="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+                    <div className="service-item position-relative shadow-none d-flex justify-content-center align-items-center">
+                    <img src="assets/img/clients/client-4.png" className="img-fluid" alt="" />
+                    </div>
+                  </div>
+                  <div className="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+                    <div className="service-item position-relative shadow-none d-flex justify-content-center align-items-center">
+                    <img src="assets/img/clients/client-5.png" className="img-fluid" alt="" />
+                    </div>
+                  </div>
+                  <div className="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+                    <div className="service-item position-relative shadow-none d-flex justify-content-center align-items-center">
+                    <img src="assets/img/clients/client-6.png" className="img-fluid" alt="" />
                     </div>
                   </div>
                 </div>
