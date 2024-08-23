@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { getEvents } from '../api'; // Импортируем функцию из вашего api.js
+import { useTranslation } from 'react-i18next';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
-
+  const { t } = useTranslation();
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -22,7 +23,7 @@ const Events = () => {
     <div className="container section-title mb-0 pb-0" 
       data-aos="fade-up"
       >
-        <h2>События</h2>
+        <h2>{t('eventsTitle')}</h2>
       </div>
       {events.map((event) => (
         <div key={event.id} className="container mt-5" data-aos="fade-up" data-aos-delay="100">

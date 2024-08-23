@@ -1,43 +1,46 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const services = [
+const services = (t) => [
   {
     icon: 'bi bi-info-circle',
-    title: 'Консультации и поддержка:',
-    description: 'Предоставление экспертных консультаций по различным аспектам электронной промышленности в рамках государственных мер государственной поддержки.',
+    title: t('servicesConsultingTitle'),
+    description: t('servicesConsultingDescription'),
     delay: 100
   },
   {
     icon: 'bi bi-search',
-    title: 'Исследования и анализ:',
-    description: 'Проведение исследований рынка и анализ текущих тенденций.',
+    title: t('servicesResearchTitle'),
+    description: t('servicesResearchDescription'),
     delay: 200
   },
   {
     icon: 'bi bi-people-fill',
-    title: 'Представление интересов:',
-    description: 'Представление интересов членов ассоциации в государственных органах и квазигосударственных организациях, а также в казахстанских и зарубежных мероприятиях и выставках.',
+    title: t('servicesRepresentationTitle'),
+    description: t('servicesRepresentationDescription'),
     delay: 300
   },
   {
     icon: 'bi bi-briefcase',
-    title: 'Организация круглых столов, конференций и семинаров:',
-    description: 'Организация различных мероприятий, с целью обсуждение актуальных вопросов с участием заинтересованных государственных органов и организаций, презентации компаний, обучения и установления контактов.',
+    title: t('servicesOrganizationTitle'),
+    description: t('servicesOrganizationDescription'),
     delay: 400
   }
 ];
 
 const Services = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="services" className="services section light-background">
       <div className="container section-title" data-aos="fade-up">
-        <h2>Услуги</h2>
-        <p>КАЭП готова оказать следующие услуги членам Ассоциации:</p>
+        <h2>{t('servicesTitle')}</h2>
+        <p>{t('servicesIntro')}</p>
       </div>
 
       <div className="container">
         <div className="row gy-4">
-          {services.map((service, index) => (
+          {services(t).map((service, index) => (
             <div key={index} className="col-xl-6 col-md-6 d-flex" data-aos="fade-up" data-aos-delay={service.delay}>
               <div className="service-item position-relative w-100">
                 <div className="icon"><i className={service.icon}></i></div>

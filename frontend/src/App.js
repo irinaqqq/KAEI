@@ -19,6 +19,8 @@ import 'aos/dist/aos.css';
 import './assets/swiper/swiper-bundle.min.css';
 import './styles/main.css';
 
+import './i18n';
+
 function App() {
 
   useEffect(() => {

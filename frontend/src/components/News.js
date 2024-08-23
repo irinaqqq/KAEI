@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { getNews } from '../api';
+import { useTranslation } from 'react-i18next';
 
 function News() {
   const [news, setNews] = useState([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -23,7 +25,7 @@ function News() {
     <div className="container section-title mb-0 pb-0" 
       data-aos="fade-up"
       >
-        <h2>Новости</h2>
+         <h2>{t('newsTitle')}</h2>
       </div>
     {news.map((item) => (
       <div key={item.id} className="container mt-5" data-aos="fade-up" data-aos-delay="100">
@@ -48,27 +50,3 @@ function News() {
 }
 
 export default News;
-
-
-{/* <section id="skills" class="skills section">
-
-<div class="container" data-aos="fade-up" data-aos-delay="100">
-
-  <div class="row">
-
-    <div class="col-lg-6 d-flex align-items-center">
-      <img src="assets/img/skills.png" class="img-fluid" alt="">
-    </div>
-
-    <div class="col-lg-6 pt-4 pt-lg-0 content">
-
-      <h3>Voluptatem dignissimos provident quasi corporis voluptas</h3>
-      <p class="fst-italic">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-    </div>
-  </div>
-
-</div>
-
-</section> */}

@@ -1,9 +1,16 @@
 import React, { useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
+import logo from '../assets/logo.png';
 function Navigation() {
 
   const location = useLocation(); 
+
+  const { t, i18n } = useTranslation();
+  
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   useEffect(() => {
     const toggleScrolled = () => {
@@ -87,34 +94,49 @@ function Navigation() {
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
   
         <NavLink to="/" className="logo d-flex align-items-center me-auto">
-          {/* <img src="assets/img/logo.png" alt=""> */}
+        <img src={logo} alt="Логотип" />
           <h1 className="sitename">KAEI</h1>
         </NavLink>
   
-        <nav id="navmenu" className="navmenu">
-          <ul>
-            <li><NavLink to="/">Главная страница</NavLink> </li>
-            
-            <li><NavLink to="/about">О нас</NavLink></li>
-            {/* <li><NavLink to="/partners">Наши партнеры</NavLink></li> */}
-            <li><NavLink to="/membership">Членство</NavLink></li>
-            <li><NavLink to="/services">Услуги</NavLink></li>
-            <li className="dropdown"><button className='navBtn'><span>Политика и Отрасль</span> <i className="bi bi-chevron-down toggle-dropdown"></i></button>
-            <ul style={{ marginLeft: '15px' }}>
-                <li><NavLink to="/politics">Государственная<br /> политика</NavLink></li>
-                <li><NavLink to="/branch">Отрасль</NavLink></li>
-              </ul>
-            </li>
-            <li><NavLink to="/contact">Связаться с нами</NavLink></li>
-            <li className="dropdown"><button className='navBtn'><span>Новости</span> <i className="bi bi-chevron-down toggle-dropdown"></i></button>
-              <ul>
-                <li><NavLink to="/news">Новости</NavLink></li>
-                <li><NavLink to="/events">События</NavLink></li>
-              </ul>
-            </li>
-          </ul>
-          <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+              <nav id="navmenu" className="navmenu">
+            <ul>
+              <li><NavLink to="/">{t('home')}</NavLink></li>
+              <li><NavLink to="/about">{t('about')}</NavLink></li>
+              {/* <li><NavLink to="/partners">{t('partners')}</NavLink></li> */}
+              <li><NavLink to="/membership">{t('membership')}</NavLink></li>
+              <li><NavLink to="/services">{t('services')}</NavLink></li>
+              <li className="dropdown">
+                <button className='navBtn'>
+                  <span>{t('navButton')}</span> <i className="bi bi-chevron-down toggle-dropdown"></i>
+                </button>
+                <ul style={{ marginLeft: '15px' }}>
+                  <li><NavLink to="/politics">{t('politics')}</NavLink></li>
+                  <li><NavLink to="/branch">{t('branch')}</NavLink></li>
+                </ul>
+              </li>
+              <li><NavLink to="/contact">{t('contact')}</NavLink></li>
+              <li className="dropdown">
+                <button className='navBtn'>
+                  <span>{t('dropdownNews')}</span> <i className="bi bi-chevron-down toggle-dropdown"></i>
+                </button>
+                <ul>
+                  <li><NavLink to="/news">{t('news')}</NavLink></li>
+                  <li><NavLink to="/events">{t('events')}</NavLink></li>
+                </ul>
+              </li>
+              <li className="dropdown">
+                <button className='navBtn'>
+                  <span>{t('language')}</span> <i className="bi bi-chevron-down toggle-dropdown"></i>
+                </button>
+                <ul>
+                  <li><button onClick={() => changeLanguage('en')} className='navBtn btndrop'>English</button></li>
+                  <li><button onClick={() => changeLanguage('ru')} className='navBtn btndrop'>Русский</button></li>
+                  <li><button onClick={() => changeLanguage('kz')} className='navBtn btndrop'>Қазақша</button></li>
+                </ul>
+              </li>
+            </ul>
+            <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
       </div>
     </header>
     );

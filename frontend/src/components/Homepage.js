@@ -1,13 +1,14 @@
 import React from 'react';
-import logo from '../assets/logo.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+  const { t } = useTranslation();
   return (
     <>
-        <section id="home" 
+    <section id="home" 
     className="hero home section"
     >
     <div className="" 
@@ -31,10 +32,10 @@ function Home() {
             style={{ backgroundColor: 'rgba(72, 122, 198, 0.6)' }}
             data-aos="zoom-out"
           >
-            <h1>Казахстанская Ассоциация Электронной Промышленности</h1>
-            <p>КАЭП объединяет ведущие предприятия и организации, работающие в сфере электронной промышленности Казахстана. Мы способствуем развитию отрасли, поддерживаем инновации и способствуем укреплению сотрудничества между участниками рынка.</p>
+            <h1>{t('associationTitle')}</h1>
+            <p>{t('associationDescription')}</p>            
             <div className="d-flex">
-              <NavLink to="/membership" className="btn-get-started">Присоединиться</NavLink>
+              <NavLink to="/membership" className="btn-get-started">{t('joinUs')}</NavLink>
               {/* <NavLink to="/about" className="glightbox btn-watch-video d-flex align-items-center"> <i className="bi bi-play-circle"></i><span>Посмотреть презентацию</span></NavLink> */}
             </div>
           </div>
@@ -52,10 +53,12 @@ function Home() {
             style={{ backgroundColor: 'rgba(72, 122, 198, 0.6)' }}
             data-aos="zoom-out"
           >
-            <h1>Миссия КАЭП</h1>
-            <p>Наша миссия - создание наиболее благоприятных условий для интеграции усилий государства, бизнес-сообщества и науки с целью развития электронной промышленности Казахстана.</p>
-            <div className="d-flex">
-              <NavLink to="/about" className="btn-get-started">О нас</NavLink>
+          <h1>{t('missionTitle')}</h1>
+          <p>{t('missionDescription')}</p>
+          <div className="d-flex">
+            <NavLink to="/about" className="btn-get-started">
+              {t('aboutUs')}
+            </NavLink>
               {/* <NavLink to="/about" className="glightbox btn-watch-video d-flex align-items-center"> <i className="bi bi-play-circle"></i><span>Посмотреть презентацию</span></NavLink> */}
             </div>
           </div>
@@ -65,7 +68,13 @@ function Home() {
       </SwiperSlide>
 
       <SwiperSlide>
-        <div className="slide-content bg-center" style={{ backgroundImage: "url('assets/img/about/6.jpeg')" }}>
+      <div
+          className="slide-content bg-center"
+          style={{
+            backgroundImage: "url('assets/img/about/7.jpg')",
+            backgroundPosition: "top",
+          }}
+        >
         <div className="container h-100">
         <div className="row gy-4 h-100">
         <div
@@ -73,10 +82,12 @@ function Home() {
             style={{ backgroundColor: 'rgba(72, 122, 198, 0.6)' }}
             data-aos="zoom-out"
           >
-            <h1>Организация круглых столов, конференций и семинаров</h1>
-            <p>КАЭП может помочь организовать различные мероприятия, с целью обсуждение актуальных вопросов с участием заинтересованных государственных органов и организаций, презентации компаний, обучения и установления контактов.</p>
+            <h1>{t('roundtableEventsTitle')}</h1>
+            <p>{t('roundtableEventsDescription')}</p>
             <div className="d-flex">
-              <NavLink to="/services" className="btn-get-started">Узнать больше</NavLink>
+              <NavLink to="/services" className="btn-get-started">
+                {t('learnMore')}
+              </NavLink>
               {/* <NavLink to="/about" className="glightbox btn-watch-video d-flex align-items-center"> <i className="bi bi-play-circle"></i><span>Посмотреть презентацию</span></NavLink> */}
             </div>
           </div>
