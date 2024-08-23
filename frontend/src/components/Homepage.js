@@ -65,7 +65,7 @@ function Home() {
       </SwiperSlide>
 
       <SwiperSlide>
-        <div className="slide-content bg-center" style={{ backgroundImage: "url('assets/img/about/3.png')" }}>
+        <div className="slide-content bg-center" style={{ backgroundImage: "url('assets/img/about/6.jpeg')" }}>
         <div className="container h-100">
         <div className="row gy-4 h-100">
         <div
