@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from django.utils.translation import gettext_lazy as _
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'main',
+    'modeltranslation'
 ]
 
 MIDDLEWARE = [
@@ -129,7 +132,7 @@ STATIC_ROOT = '/app/staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [  
-    "http://localhost",  # Для прямого доступа с корневого домена
+    "http://localhost:3000",  # Для прямого доступа с корневого домена
     "https://env-3063293.jcloud.kz",
     "https://kaei.kz",
 ]
@@ -141,3 +144,10 @@ CSRF_TRUSTED_ORIGINS = [
     'https://kaei.kz',
 ]
 
+LANGUAGES = [
+    ('en', _('English')),
+    ('ru', _('Russian')),
+    ('kk', _('Kazakh')),
+]
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'

@@ -43,7 +43,7 @@ function ContactUs() {
                   <div className="info-item d-flex mb-0 justify-content-center" data-aos="fade-up" data-aos-delay="400">
                     <i className="bi bi-instagram flex-shrink-0"></i>
                     <div className="align-content-center">
-                      <a href="https://instagram.com/kaep" target="_blank" rel="noopener noreferrer">
+                      <a href="https://instagram.com/kaei.kz" target="_blank" rel="noopener noreferrer">
                         <h3 className="socLinks">{t('instagram')}</h3>
                       </a>
                     </div>
